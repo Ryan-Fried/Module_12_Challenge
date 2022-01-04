@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body>
+
+<div id="Home" class="tabcontent">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" >
+        <h1 style="color: rgb(255, 255, 255);">Belly Button Biodiversity Dashboard</h1>
+        <p style="font-size:30px; color:rgb(7, 7, 7);"><b>Use the interactive charts below to explore the dataset</b></p>
+      </div>
+      <h3 style='color:rgb(255, 255, 255)'> Demographic information about the bacterial data for each volunteer </h3>
+      <h3 style='color:rgb(255, 255, 255)'>The following charts dispaly the top 10 bacterial species in their belly buttons.</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+    <div class='row'>
+      <h3 style='color: rgb(28, 28, 31);'>Page Info</h3>
+      <p style="font-size:20px; color:rgb(255, 255, 255);">This page conveys the results of a study on the bacteria commonly found in the belly button. Using the dropdown, select a participant ID number to see the breakdown of the top 10 most common bacteria in the given participant's naval.</p>
+      <p  style="font-size:20px; color:rgb(255, 255, 255);">The bar chart displays the top 10 cultures found in a given navel in descending order. The gauge displays the frequency a given participant washes their naval on a weekly basis. The bubble chart displays the different cultures per sample.</p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/charts.js"></script>
+  <script src="samples.json"></script>
+</div>
+
+</body>
+
+</html>
